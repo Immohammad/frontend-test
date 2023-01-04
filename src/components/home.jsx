@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <div>
-      <div>
+      <div className="flex">
         {cards ? (
           cards.map((unit) => <Card user={unit} />)
         ) : (
