@@ -12,16 +12,17 @@ body {
   font-family: kolli;
   font-weight: 400;
   font-style: normal;
+  font-size: 18px;
 }
 /* *******************navbar********************** */
 .navbarFont {
-  background-color: #F7F7F7;
-  color: #58595B !important;
+  background-color: #f7f7f7;
+  color: #58595b !important;
   font-size: 20px;
   font-weight: 600;
   /* margin-left: 30px; */
 }
-#logo{
+#logo {
   width: 110px;
   height: 40px;
   margin-right: 70px;
@@ -42,20 +43,77 @@ body {
   margin: 0 1rem 2rem 1rem;
   text-align: center;
 }
-.card{
-  cursor: pointer;
+.card {
   padding: 10px;
-  transition: all .3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
-.card:hover{
+.card:hover {
   transform: scale(1.1);
 }
-#delete{
+#delete {
   background-color: red;
-  color: #F7F7F7;
+  color: #f7f7f7;
   width: fit-content;
   height: fit-content;
   border-radius: 3px;
   border: none;
 }
 /* *******************end of card********************** */
+/* *******************footer********************** */
+.socials {
+  border: solid 1px;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* *******************end of footer********************** */
+/* *******************about********************** */
+#aboutImgContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#aboutImg {
+  width: 100%;
+  height: 60vh;
+  filter: brightness(40%);
+}
+#aboutText {
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+}
+.serviceContain {
+  max-width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20pt; */
+  overflow: hidden;
+  margin: 20pt auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .serviceContain {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.services {
+  margin: 0 1rem 0.5rem;
+  /* border: solid 0.5px #f48120; */
+  background-color: #d2d5dc;
+  border-radius: 8px;
+  height: 100%;
+}
+.serviceImg {
+  width: 100%;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+.serviceImg:hover {
+  transform: scale(1.05);
+}
+/* *******************end of about********************** */
