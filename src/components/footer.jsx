@@ -14,7 +14,7 @@ import {
 
 export default function App() {
   return (
-    <MDBFooter className="bg-dark text-center text-white">
+    <MDBFooter className="bg-dark text-center text-white" style={{marginTop:'30pt'}}>
       <MDBContainer className="p-4 pb-0">
         <section className="mb-4">
           <img src={logo} width="110px" style={{marginLeft:"25px"}}/>

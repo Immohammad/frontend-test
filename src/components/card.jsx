@@ -10,7 +10,14 @@ function Card(props) {
   const handleDelete = (e) => {
     e.stopPropagation();
     dispatch(deleteCard(props.user.id));
-    axios.delete(`http://localhost:8000/sample/${props.user.id}`);
+    axios
+      .delete(
+        `https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images/${props.user.id}`
+      )
+      .then(() => dispatch(deleteCard(props.user.id)))
+      .catch((error) => {
+        console.error("There was an error!", error);
+      });
   };
   return (
     <div
@@ -22,11 +29,6 @@ function Card(props) {
       <p>
         <strong>{props.user.title}</strong>
       </p>
-      {/* <img key={props.user.avatar} src={props.user.avatar} />
-      <p>
-        <strong>{props.user.first_name}</strong>
-        <p>{props.user.email}</p>
-      </p> */}
       <button id="delete" onClick={handleDelete}>
         ×
       </button>

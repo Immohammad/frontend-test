@@ -20,7 +20,6 @@ body {
   color: #58595b !important;
   font-size: 20px;
   font-weight: 600;
-  /* margin-left: 30px; */
 }
 #logo {
   width: 110px;
@@ -31,16 +30,14 @@ body {
 /* *******************end of navbar********************** */
 
 /* *******************card********************** */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
+.timeline {
   justify-content: center;
   align-items: center;
   margin: 20pt;
 }
 
-.flex > div {
-  margin: 0 1rem 2rem 1rem;
+.timeline > div {
+  margin: 0 0.3rem 1rem 0.3rem;
   text-align: center;
 }
 .card {
@@ -69,11 +66,6 @@ body {
 }
 /* *******************end of footer********************** */
 /* *******************about********************** */
-#aboutImgContainer {
-  position: relative;
-  text-align: center;
-  color: white;
-}
 #aboutImg {
   width: 100%;
   height: 60vh;
@@ -84,13 +76,28 @@ body {
   top: 10vh;
   right: 5vw;
 }
+#aboutImgContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#aboutData {
+  max-width: 80%;
+  margin: 0 auto;
+}
+hr {
+  width: 30%;
+  margin: 10pt 35%;
+  border-top: 3px solid #f48120;
+}
+#aboutData > h2 {
+  padding-top: 20px;
+}
 .serviceContain {
-  max-width: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  /* margin: 20pt; */
   overflow: hidden;
   margin: 20pt auto;
 }
@@ -103,7 +110,6 @@ body {
 }
 .services {
   margin: 0 1rem 0.5rem;
-  /* border: solid 0.5px #f48120; */
   background-color: #d2d5dc;
   border-radius: 8px;
   height: 100%;
@@ -116,4 +122,27 @@ body {
 .serviceImg:hover {
   transform: scale(1.05);
 }
+#contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.flex {
+  display: flex;
+  margin: 20pt;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flex > div {
+  margin: 0 1rem 1rem 0.5rem;
+  text-align: center;
+}
 /* *******************end of about********************** */
+/* *******************details********************** */
+#detailsContainer {
+  margin: 10pt;
+}
+#detailsContainer > h2 {
+  color: #58595b;
+}
+/* *******************end of details********************** */

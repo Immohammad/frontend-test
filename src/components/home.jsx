@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function Home() {
   // const [cards, setCards] = useState([]);
-  const cards = useSelector((state) => state.list.contents)
+  const cards = useSelector((state) => state.list.contents);
   // useEffect(() => {
   //   axios
   //     .get("http://localhost:8000/sample")
@@ -29,15 +29,17 @@ function Home() {
   // }, []);
 
   return (
-    <div>
-      <div className="flex">
+      <div className="row timeline">
         {cards ? (
-          cards.map((unit) => <Card user={unit} />)
+          cards.map((unit) => (
+            <div className="col-xs-12 col-sm-6 col-md-3 col-xl-2">
+              <Card user={unit} />
+            </div>
+          ))
         ) : (
           <div>درخواستی یافت نشد</div>
         )}
       </div>
-    </div>
   );
 }
 

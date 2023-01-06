@@ -15,7 +15,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("http://localhost:8000/sample")
+      .get("https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images")
       .then((response) => {
         dispatch(update(response.data));
         // console.log(response.data)
@@ -24,6 +24,7 @@ function App() {
         if (error.response.status == 404) dispatch(update([]));
       });
   }, []);
+
   
   return (
     <div className="App">

@@ -8,13 +8,24 @@ function Details() {
   const image = data.find((x) => x.id == id);
 
   console.log(image);
-  return <div>
-    <img src={image.image} />
-    <p>{image.title}</p>
-    <p>{image.photographer}</p>
-    <p>{image.dateCreated}</p>
-    <p>{image.description}</p>
-  </div>;
+  return (
+    <div style={{ margin: "20pt auto" , maxWidth: '85%'}}>
+      <img src={image.image} />
+      <div id="detailsContainer">
+        <hr />
+        <h2>{image.title}</h2>
+        <hr />
+        <h2>عکاس</h2>
+        <p>{image.photographer}</p>
+        <hr />
+        <h2>تاریخ ثبت تصویر</h2>
+        <p>{image.createdAt.substring(0, 10)}</p>
+        <hr />
+        <h2>شرح تصویر</h2>
+        <p>{image.description}</p>
+      </div>
+    </div>
+  );
 }
 
 export default Details;

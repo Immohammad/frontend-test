@@ -9,14 +9,6 @@
       "photographer": "ali"
     },
     {
-      "id": 1,
-      "title": "Flowers and some fruits",
-      "image": "https://i.imgur.com/KIPtISY.jpg",
-      "dateCreated": "25/01/2020",
-      "description": "ورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.",
-      "photographer": "hossein"
-    },
-    {
       "id": 2,
       "title": "Beautiful scenery",
       "image": "https://i.imgur.com/2jMCqQ2.jpg",

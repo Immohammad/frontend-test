@@ -1,11 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import truck from "./stuffs/truck.jpg";
 import service1 from "./stuffs/186728_101.jpg";
 import service2 from "./stuffs/186729_621.jpg";
 import service3 from "./stuffs/186732_748.jpg";
+import Card from "./card";
 
 function AboutUs() {
-  useEffect
+  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://reqres.in/api/users")
+      .then((response) => {
+        setCards(response.data.data);
+      })
+      .catch((error) => {
+        if (error.response.status == 404) setCards([]);
+      });
+  }, []);
   return (
     <div>
       <div id="aboutImgContainer">
@@ -18,16 +31,10 @@ function AboutUs() {
           </span>
         </h1>
       </div>
-      <div>
+      <div id="aboutData">
         {/*kolli */}
-        <h2 style={{ paddingTop: "20px" }}>خدمات ما</h2>
-        <hr
-          style={{
-            width: "30%",
-            margin: "0 35%",
-            borderTop: "3px solid #F48120",
-          }}
-        />
+        <h2>خدمات ما</h2>
+        <hr />
         <div className="serviceContain">
           <div className="services">
             <img src={service1} alt="service1" className="serviceImg" />
@@ -56,14 +63,46 @@ function AboutUs() {
             </p>
           </div>
         </div>
-        <h2 style={{ paddingTop: "20px" }}>تیم ما</h2>
-        <hr
-          style={{
-            width: "30%",
-            margin: "0 35%",
-            borderTop: "3px solid #F48120",
-          }}
-        />
+        <h2>تیم ما</h2>
+        <hr />
+        <div className="flex">
+          {cards ? (
+            cards.map((unit) => (
+              <div>
+                <img src={unit.avatar} />
+                <p>{unit.first_name}</p>
+                <p>{unit.email}</p>
+              </div>
+            ))
+          ) : (
+            <div>درخواستی یافت نشد</div>
+          )}
+        </div>
+        <h2>ارتباط با ما</h2>
+        <hr />
+        <div className="row" style={{ margin: "20pt auto" }}>
+          <div className="col-sm-12 col-md-6" style={{ textAlign: "right" }}>
+            <p>
+              آدرس: <br /> آمل، بابل، قائمشهر
+            </p>
+            <p>
+              تلفن: <br /> 0218574693 <br />
+              0218574683
+            </p>
+            <p>
+              ساعت کاری: <br />
+              شنبه تا چهارشنبه 10 صبح الی الابد
+            </p>
+          </div>
+          <iframe
+          className="col-sm-12 col-md-6"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.3124125921051!2d51.414635404626246!3d35.73362842571486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e03013294ad4f%3A0xe2e07ce9f99a1261!2z2KrYsdin2KjYsdmG2Ko!5e0!3m2!1sen!2sfr!4v1673010731192!5m2!1sen!2sfr"
+            height="400"
+            style={{ border: "0" }}
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
