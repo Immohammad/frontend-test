@@ -8,6 +8,7 @@ import {
 } from "mdb-react-ui-kit";
 
 export default function App() {
+  //i used mdbreact library for creating this footer.
   return (
     <MDBFooter className="bg-dark text-center text-white" style={{marginTop:'30pt'}}>
       <MDBContainer className="p-4 pb-0">

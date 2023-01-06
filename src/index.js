@@ -11,15 +11,16 @@ import store from "./store/store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    
+    {/* in a project with this scale due to redux overload It isn't necessary
+    to use redux. but due to project description and show mastery of redux,
+    after asking from interviewer id decided to use redux here 
+     */}
     <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>
 );
 
-
 serviceWorkerRegistration.unregister();
-
 
 reportWebVitals();

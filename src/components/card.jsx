@@ -7,27 +7,30 @@ import axios from "axios";
 function Card(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  //in this function at first request to server and delete image from database.
+  //if it was ok, after that image would delete from our store.
   const handleDelete = (e) => {
     e.stopPropagation();
-    dispatch(deleteCard(props.user.id));
     axios
       .delete(
-        `https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images/${props.user.id}`
+        `https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images/${props.image.id}`
       )
-      .then(() => dispatch(deleteCard(props.user.id)))
+      .then(() => dispatch(deleteCard(props.image.id)))
       .catch((error) => {
         console.error("There was an error!", error);
       });
   };
+
   return (
     <div
-      key={props.user.id}
+      key={props.image.id}
       className="card"
-      onClick={() => navigate(`/details/${props.user.id}`)}
+      onClick={() => navigate(`/details/${props.image.id}`)}
     >
-      <img key={props.user.image} src={props.user.image} />
-      <p style={{padding: '10px'}} >
-        <strong>{props.user.title}</strong>
+      <img key={props.image.image} src={props.image.image} />
+      <p style={{ padding: "10px" }}>
+        <strong>{props.image.title}</strong>
       </p>
       <button id="delete" onClick={handleDelete}>
         ×

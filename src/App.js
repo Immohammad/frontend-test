@@ -14,7 +14,8 @@ import Footer from "./components/layouts/footer";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-
+    //at first all of data is fetched from mockAPI and save in our redux store.
+    //In the continuation of the project we use data that saved in our store.
     axios
       .get("https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images")
       .then((response) => {

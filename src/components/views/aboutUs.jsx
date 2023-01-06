@@ -8,6 +8,9 @@ import service3 from "../stuffs/186732_748.jpg";
 
 function AboutUs() {
   const [cards, setCards] = useState([]);
+
+  //in this useefect we did nothing; just i gave some fake people for
+  //our team part of page.
   useEffect(() => {
     axios
       .get("https://reqres.in/api/users")
@@ -18,6 +21,7 @@ function AboutUs() {
         if (error.response.status == 404) setCards([]);
       });
   }, []);
+
   return (
     <div>
       <div id="aboutImgContainer">
