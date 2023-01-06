@@ -3,7 +3,6 @@ import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../stuffs/logo.png";
 
-
 //a navbar from react-bootstrap
 const Navbars = () => {
   return (
