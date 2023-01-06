@@ -14,18 +14,17 @@ import Footer from "./components/layouts/footer";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
+
     axios
       .get("https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images")
       .then((response) => {
         dispatch(setContents(response.data));
-        // console.log(response.data)
       })
       .catch((error) => {
         if (error.response.status == 404) dispatch(setContents([]));
       });
   }, []);
 
-  
   return (
     <div className="App">
       <Router>
