@@ -1,15 +1,10 @@
-import logo from "./stuffs/logo.png";
+import logo from "../stuffs/logo.png";
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import "bootstrap-css-only/css/bootstrap.min.css";
-// import 'mdbreact/dist/css/mdb.css';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
   MDBIcon,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 
 export default function App() {

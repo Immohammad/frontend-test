@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import truck from "./stuffs/truck.jpg";
-import service1 from "./stuffs/186728_101.jpg";
-import service2 from "./stuffs/186729_621.jpg";
-import service3 from "./stuffs/186732_748.jpg";
-import Card from "./card";
+import truck from "../stuffs/truck.jpg";
+import service1 from "../stuffs/186728_101.jpg";
+import service2 from "../stuffs/186729_621.jpg";
+import service3 from "../stuffs/186732_748.jpg";
 
 function AboutUs() {
   const [cards, setCards] = useState([]);

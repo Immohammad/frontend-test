@@ -26,7 +26,7 @@ function Card(props) {
       onClick={() => navigate(`/details/${props.user.id}`)}
     >
       <img key={props.user.image} src={props.user.image} />
-      <p>
+      <p style={{padding: '10px'}} >
         <strong>{props.user.title}</strong>
       </p>
       <button id="delete" onClick={handleDelete}>
