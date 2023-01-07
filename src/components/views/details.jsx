@@ -10,7 +10,7 @@ function Details() {
 
   return (
     <div style={{ margin: "20pt auto" , maxWidth: '85%'}}>
-      <img src={image.image} />
+      <img style={{maxWidth: '100%'}} src={image.image} />
       <div id="detailsContainer">
         <hr />
         <h2>{image.title}</h2>

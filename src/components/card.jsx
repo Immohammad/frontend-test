@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteCard } from "../store/listSlice";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function Card(props) {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ function Card(props) {
         `https://63b7707d4f17e3a931d4021e.mockapi.io/api/v1/images/${props.image.id}`
       )
       .then(() => dispatch(deleteCard(props.image.id)))
-      .catch((error) => {
-        console.error("There was an error!", error);
+      .catch(() => {
+        toast.error("حذف با خطا مواجه شد");
       });
   };
 

@@ -110,6 +110,7 @@ hr {
 }
 .services {
   margin: 0 1rem 0.5rem;
+  margin-bottom: 1rem;
   background-color: #d2d5dc;
   border-radius: 8px;
   height: 100%;

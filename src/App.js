@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { setContents } from "./store/listSlice";
+import { ToastContainer,toast } from 'react-toastify';
 
 import AboutUs from "./components/views/aboutUs";
 import Details from "./components/views/details";
@@ -22,7 +23,7 @@ function App() {
         dispatch(setContents(response.data));
       })
       .catch((error) => {
-        if (error.response.status == 404) dispatch(setContents([]));
+        toast.error("داده ها دریافت نشد. مدتی بعد تلاش کنید.");
       });
   }, []);
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <ToastContainer position='top-left' autoClose={3000}/>
       </Router>
     </div>
   );
