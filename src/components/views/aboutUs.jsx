@@ -27,7 +27,7 @@ function AboutUs() {
       <div id="aboutImgContainer">
         <img src={truck} alt="truck" id="aboutImg" />
         <h1 id="aboutText">
-          سامانه تست ترابرنت <br />{" "}
+          سامانه تست لوگو! <br />{" "}
           <span style={{ fontWeight: "normal", fontSize: "20px" }}>
             {" "}
             همین الان نصب کن
@@ -98,10 +98,9 @@ function AboutUs() {
             </p>
           </div>
           <iframe
-          className="col-sm-12 col-md-6"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.3124125921051!2d51.414635404626246!3d35.73362842571486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e03013294ad4f%3A0xe2e07ce9f99a1261!2z2KrYsdin2KjYsdmG2Ko!5e0!3m2!1sen!2sfr!4v1673010731192!5m2!1sen!2sfr"
-            height="400"
-            style={{ border: "0" }}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26067.061209573367!2d51.34923087504778!3d35.6998439971783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfe05732c2e91%3A0xfcbec017befd15f4!2sAzadi%20Tower!5e0!3m2!1sen!2sde!4v1673821585567!5m2!1sen!2sde"
+            className="col-sm-12 col-md-6"
+            style={{ border: "0", height: "400" }}
             allowfullscreen=""
             loading="lazy"
           ></iframe>
